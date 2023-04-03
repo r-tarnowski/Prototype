@@ -9,7 +9,7 @@ void printHeader() {
    cout << endl;
    cout << "================================================" << endl;
    cout << "Design Patterns in Modern C++ by Dmitri Nesteruk" << endl;
-   cout << "Prototype, Simple Duplication                   " << endl;
+   cout << "Prototype, Copying Constructor                  " << endl;
    cout << "================================================" << endl;
    cout << endl;
 }
@@ -34,19 +34,6 @@ struct Contact {
 
 int main(int argc, char *argv[]) {
    printHeader();
-
-   Contact worker { "", Address{ "Okrąg 4", "Warszawa", 0 }};
-   std::cout << worker << std::endl;
-
-   Contact Jan = worker;
-   Jan.name = "Jan Kowalski";
-   Jan.address.suite = 5;
-   std::cout << Jan << std::endl;
-
-   Contact Janina = worker;
-   Janina.name = "Janina Nowak";
-   Janina.address.suite = 11;
-   std::cout << Janina << std::endl;
 
    cout << endl;
    return 0;

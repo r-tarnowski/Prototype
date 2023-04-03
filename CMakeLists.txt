@@ -12,6 +12,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIB_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
 
 set(TARGET_SIMPLE_DUPLICATION simple_duplication)
+set(TARGET_COPYING_CONSTRUCTOR copying_constructor)
 
 
 include_directories(${INCLUDE_DIR} "/export/devel/platform/boost/$ENV{BOOST_VERSION}/boost/include")
@@ -22,10 +23,12 @@ link_directories( ${LIB_DIR} )
 set(CMAKE_CXX_FLAGS "-fPIC -O3 -Wall -Wno-unused-function -std=c++20")
 
 set(SOURCES_SIMPLE_DUPLICATION ${SRC_DIR}/SimpleDuplication.cpp)
+set(SOURCES_COPYING_CONSTRUCTOR ${SRC_DIR}/CopyingConstructor.cpp)
 
 #add_library(${TARGET_LIB} STATIC ${SOURCES_LIB})
 
 add_executable(${TARGET_SIMPLE_DUPLICATION} ${SOURCES_SIMPLE_DUPLICATION})
+add_executable(${TARGET_COPYING_CONSTRUCTOR} ${SOURCES_COPYING_CONSTRUCTOR})
 
 #target_link_libraries(${TARGET_SUB} ${APP_LINK_LIBS})
 
